@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #1E2938;
+  display: grid;
+  place-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+main {
+  margin: 0;
+  padding: 1rem;
+  background-color: rgb(63, 63, 155);
+  border-radius: .7rem;
+  opacity: .8;
+}
+.title{
+  color: #FDFEFB;
+  margin: 0;
+  padding: 0;
+  font-family: karla;
+  font-size: 2rem;
+}
+.costumized-title {
+  color: #4BDD87;
+  display: block;
+}
+.quote {
+  color: #939BA7;
+  font-family: inter;
+}
+.passwords-button {
+  background: #10B881;
+  border: 0;
+  border-radius: .2rem;
+  padding: .5rem;
+  font-family: inter;
+}
+.passwords-button:hover {
+  opacity: .9;
+}
+.passwords-button:active{
+  opacity: .8;
+}
+.solid {
+border-top: 1px solid #2F3E53;
+margin: 1.5rem 0;
+}
+.password {
+  margin-right: .5rem;
+  background: #283549;
+  padding: .4rem;
+  border-radius: .3rem;
+  width: 10rem;
+  height: 1.25rem;
+  color: #75F4AE;
+  font-family : karla;
+}
+.passwords {
+  display: flex;
+}
