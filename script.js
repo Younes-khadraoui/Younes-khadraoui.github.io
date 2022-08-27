@@ -1,37 +1,50 @@
-const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?",
-"/"];
-let passwordOne = document.getElementById("password_one");
- let passwordTwo = document.getElementById("password_two");
-function generate(){
-    cleared();   
-     for (let i=0 ; i<15 ;i++){
-        let randomIndexOne = Math.floor( Math.random() * characters.length );
-        passwordOne.textContent +=  characters[randomIndexOne] ;
-        let randomIndexTwo = Math.floor( Math.random() * characters.length );
-        passwordTwo.textContent += characters[randomIndexTwo];
-    }   
-}
-function cleared(){
-    passwordOne.textContent = "";
-    passwordTwo.textContent = "";
-}
-//document.write
-function copyPassOne(){
-    let elementText = passwordOne.textContent;
-    // turning the text to an input element
-    let inputElement = document.createElement("input");
-    inputElement.setAttribute("value",elementText);
-    document.body.appendChild(inputElement);
-    inputElement.select();
-    document.execCommand("copy");
-    inputElement.parentNode.removeChild(inputElement);
-}
-function copyPassTwo(){
-    let elementText = passwordTwo.textContent;
-    let inputElement = document.createElement("input");
-    inputElement.setAttribute("value",elementText);
-    document.body.appendChild(inputElement);
-    inputElement.select();
-    document.execCommand("copy");
-    inputElement.parentNode.removeChild(inputElement);
-}
+$(document).ready(function(){
+    $(window).scroll(function(){
+        // sticky navbar on scroll script
+        if(this.scrollY > 20){
+            $('.navbar').addClass("sticky");
+        }else{
+            $('.navbar').removeClass("sticky");
+        }
+        
+        // scroll-up button show/hide script
+        if(this.scrollY > 500){
+            $('.scroll-up-btn').addClass("show");
+        }else{
+            $('.scroll-up-btn').removeClass("show");
+        }
+    });
+
+    // slide-up script
+    $('.scroll-up-btn').click(function(){
+        $('html').animate({scrollTop: 0});
+        // removing smooth scroll on slide-up button click
+        $('html').css("scrollBehavior", "auto");
+    });
+
+    $('.navbar .menu li a').click(function(){
+        // applying again smooth scroll on menu items click
+        $('html').css("scrollBehavior", "smooth");
+    });
+
+    // toggle menu/navbar script
+    $('.menu-btn').click(function(){
+        $('.navbar .menu').toggleClass("active");
+        $('.menu-btn i').toggleClass("active");
+    });
+
+    // typing text animation script
+    var typed = new Typed(".typing", {
+        strings: ["Student", "Developer", "Designer", "Freelancer"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true
+    });
+
+    var typed = new Typed(".typing-2", {
+        strings: ["Student", "Developer",  "Designer", "Freelancer"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true
+    });
+});
