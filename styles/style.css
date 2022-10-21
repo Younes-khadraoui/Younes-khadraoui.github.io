@@ -21,7 +21,6 @@ html{
 ::-webkit-scrollbar-thumb {
     background: #888;
 }
-
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
@@ -319,21 +318,25 @@ section .title::after{
     width: 90%;
 }
 .skills-content .right .css::before{
-    width: 60%;
-}
-.skills-content .right .js::before{
     width: 80%;
 }
-.skills-content .right .php::before{
+.skills-content .right .js::before{
+    width: 60%;
+}
+.skills-content .right .node::before{
     width: 50%;
 }
-.skills-content .right .mysql::before{
+.skills-content .right .mongo::before{
     width: 70%;
 }
 
 /* projects section styling */
 .project .title:after {
   content :"My Projects"
+}
+.projects .projects-content{
+    display: flex;
+    gap:5rem;
 }
 .projects .projects-content .column{
   width: calc(50% - 30px);
@@ -361,6 +364,22 @@ section .title::after{
 .projects .projects-content .left a:hover{
   color: rgb(145, 10, 235);
   background: none;
+}
+.projects .projects-content .right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+}
+.projects .projects-content .right a img{
+    width:10rem;
+    height: 7rem;
+    border-radius: 1rem;
+}
+.projects .projects-content .right a img:hover{
+    opacity:.8;
+}
+.projects .projects-content .right div p{
+   text-align: center;
 }
 
 /* contact section styling */
@@ -460,7 +479,6 @@ section .title::after{
 }
 
 /* footer section styling */
-
 footer{
     background: #111;
     padding: 15px 23px;
@@ -475,7 +493,6 @@ footer span a:hover{
     text-decoration: underline;
 }
 
-
 /* responsive media query start */
 @media (max-width: 1104px) {
     .about .about-content .left img{
@@ -483,7 +500,6 @@ footer span a:hover{
         width: 350px;
     }
 }
-
 @media (max-width: 991px) {
     .max-width{
         padding: 0 50px;
@@ -549,7 +565,6 @@ footer span a:hover{
         margin-bottom: 35px;
     }
 }
-
 @media (max-width: 690px) {
     .max-width{
         padding: 0 23px;
@@ -564,7 +579,6 @@ footer span a:hover{
         font-size: 20px;
     }
 }
-
 @media (max-width: 500px) {
     .home .home-content .text-2{
         font-size: 50px;
