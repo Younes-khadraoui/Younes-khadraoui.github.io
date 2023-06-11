@@ -1,0 +1,61 @@
+/* projects section styling */
+.project .title:after {
+    content :"My Projects"
+  }
+  .projects .projects-content{
+      display: flex;
+      gap:5rem;
+  }
+  .projects .projects-content .column{
+    width: calc(50% - 30px);
+  }
+  .projects .projects-content .left .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .projects .projects-content .left p{
+    text-align: justify;
+  }
+  .projects .projects-content .left a{
+    display: inline-block;
+    background: #B53DFF;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #B53DFF;
+    transition: all 0.3s ease;
+  }
+  .projects .projects-content .left a:hover{
+    color: #B53DFF;
+    background: none;
+  }
+  .projects .projects-content .right {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      place-items: center;
+  }
+.projects .projects-content .right a img{
+  width:10rem;
+  height: 7rem;
+  border-radius: 1rem;
+}
+.projects .projects-content .right a img:hover{
+  opacity:.8;
+}
+.projects .projects-content .right div p{
+  text-align: center;
+}
+
+@media (max-width: 690px) {
+    .projects .projects-content{
+        display: flex;
+        flex-direction : column;
+    }
+    .projects .projects-content .column{
+        width: 100%;
+    }
+}
